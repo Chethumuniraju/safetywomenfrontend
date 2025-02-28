@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
-import process from "process";
-
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const API_BASE_URL =import.meta.env.VITE_API_BASE_URL;
 
 const PoliceDashboard = () => {
   const [complaints, setComplaints] = useState([]);

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import process from "process";
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const API_BASE_URL =import.meta.env.VITE_API_BASE_URL;
 
 const AddPolice = () => {
   const navigate = useNavigate();
@@ -56,7 +56,7 @@ const AddPolice = () => {
     console.log("Sending Data to Server:", policeData);
 
     // Retrieve token from localStorage (assuming login stores it)
-    const token = localStorage.getItem("token"); 
+    const token = localStorage.getItem("adminToken"); 
 
     if (!token) {
       alert("Authorization token is missing. Please log in again.");
