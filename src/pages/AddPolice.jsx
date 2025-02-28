@@ -65,7 +65,7 @@ const AddPolice = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/admins/police/register",
+        `${API_BASE_URL}/api/admins/police/register`,
         policeData,
         {
           headers: {
