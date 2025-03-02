@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const API_BASE_URL =import.meta.env.VITE_API_BASE_URL;
+console.log()
 
 const Dashboard = () => {
   const [contacts, setContacts] = useState([]);
@@ -82,7 +83,7 @@ const Dashboard = () => {
 
           alert("Complaint registered successfully!");
         } catch (err) {
-          setError("Failed to register complaint.");
+          setError(err);
         }
       },
       () => {

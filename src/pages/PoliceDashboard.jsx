@@ -70,6 +70,7 @@ const PoliceDashboard = () => {
                 <tr>
                   <th>ID</th>
                   <th>Complaint</th>
+                  <th>PhoneNumber</th>
                   <th>Location</th>
                   <th>Status</th>
                   <th>Action</th>
@@ -79,7 +80,9 @@ const PoliceDashboard = () => {
                 {complaints.map((complaint) => (
                   <tr key={complaint.id}>
                     <td>{complaint.id}</td>
-                    <td>{complaint.complaint}</td>
+                    <td>{complaint.message}</td>
+                    <td>{complaint.user.phoneNumber}</td>
+
                     <td>
                       {complaint.address || `${complaint.latitude}, ${complaint.longitude}`}
                     </td>
